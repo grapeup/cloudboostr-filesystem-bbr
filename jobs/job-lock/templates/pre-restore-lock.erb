@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set +e
+
+PATH=/var/vcap/bosh/bin:$PATH
+
+<% p('lock.monit_job', []).each do |job| %>
+monit stop <%= job %>
+<% end %>
+
+<% p('lock.pid_path', []).each do |pid_path| %>
+PID=$(cat <%= pid_path %>)
+while [[ -n $PID && -e /proc/$PID ]];do
+  echo "Waiting until process($PID) stops"
+  sleep 1
+done
+<% end %>
+

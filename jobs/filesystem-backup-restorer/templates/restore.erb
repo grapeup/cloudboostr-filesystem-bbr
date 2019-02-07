@@ -1,0 +1,17 @@
+#!/bin/bash
+
+BACKUP_PATH="<%= p('backup_path') %>"
+
+<% if_p('restore_path') do |prop| %>
+BACKUP_PATH="<%= prop %>"
+<% end %>
+
+BACKUP_DIR="$(dirname ${BACKUP_PATH})"
+BACKUP_BASE="$(basename ${BACKUP_PATH})"
+
+BACKUP_PATH="${BACKUP_DIR}/${BACKUP_BASE}"
+
+rm -rf "${BACKUP_PATH}"
+mkdir -p "${BACKUP_PATH}"
+
+\cp -a "${BBR_ARTIFACT_DIRECTORY}/<%= p('backup_name') %>/." "${BACKUP_PATH}/"

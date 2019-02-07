@@ -1,0 +1,19 @@
+---
+name: job-lock
+
+templates:
+  pre-backup-lock.erb: bin/bbr/pre-backup-lock
+  post-backup-unlock.erb: bin/bbr/post-backup-unlock
+  pre-restore-lock.erb: bin/bbr/pre-restore-lock
+  post-restore-unlock.erb: bin/bbr/post-restore-unlock
+
+packages: []
+
+properties:
+  lock:
+    monit_job:
+      description: |
+        List of jobs to lock
+    pid_path:
+      description: |
+        List of pids files to check

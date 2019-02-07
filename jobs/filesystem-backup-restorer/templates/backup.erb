@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BACKUP_PATH="<%= p('backup_path') %>"
+
+BACKUP_DIR="$(dirname ${BACKUP_PATH})"
+BACKUP_BASE="$(basename ${BACKUP_PATH})"
+
+BACKUP_PATH="${BACKUP_DIR}/${BACKUP_BASE}"
+
+mkdir -p "<% p('backup_name') %>"
+
+cp -a "${BACKUP_PATH}/." "${BBR_ARTIFACT_DIRECTORY}/<%= p('backup_name') %>"

@@ -1,0 +1,21 @@
+---
+name: filesystem-backup-restorer
+
+templates:
+  backup.erb: bin/bbr/backup
+  restore.erb: bin/bbr/restore
+
+packages: []
+
+properties:
+  backup_path:
+    description: "Path to directory to be backuped up"
+    example: "/var/vcap/store/redis"
+  restore_path:
+    description: "Optional path to restore"
+    example: "/var/vcap/store/example"
+    
+  backup_name:
+    description: "Name of directory for backup"
+    example: "redis"
+

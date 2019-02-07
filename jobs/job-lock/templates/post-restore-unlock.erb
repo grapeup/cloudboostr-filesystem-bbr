@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set +e
+
+PATH=/var/vcap/bosh/bin:$PATH
+
+monit start all
+
