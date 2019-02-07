@@ -1,1 +1,5 @@
 name: cloudboostr-filesystem-bbr
+blobstore:
+  provider: s3
+  options:
+    bucket_name: filesystem-bbr-blobs.cloudboostr.com
