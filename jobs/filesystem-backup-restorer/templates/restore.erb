@@ -18,7 +18,7 @@ BACKUP_PATH="${BACKUP_DIR}/${BACKUP_BASE}"
 rm -rf "${BACKUP_PATH}"
 mkdir -p "${BACKUP_PATH}"
 
-cp -a "${BBR_ARTIFACT_DIRECTORY}/<%= p('backup_name') %>/." "${BACKUP_PATH}/"
+\cp -a "${BBR_ARTIFACT_DIRECTORY}/<%= p('backup_name') %>/." "${BACKUP_PATH}/"
 
 <% if_p("post_restore_script") do |script| %>
 <% script %>    
