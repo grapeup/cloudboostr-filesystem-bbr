@@ -19,3 +19,15 @@ properties:
     description: "Name of directory for backup"
     example: "redis"
 
+  pre_backup_script:
+    description: "Script to be run before backup (directory copy)"
+    
+  post_backup_script:
+    description: "Script to be run after backup (directory copy)"
+
+  pre_restore_script:
+    description: "Script to be run before restore (directory copy)"
+
+  post_restore_script:
+    description: "Script to be run after restore (directory copy)"
+
