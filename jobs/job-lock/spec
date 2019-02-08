@@ -14,6 +14,16 @@ properties:
     monit_job:
       description: |
         List of jobs to lock
+        
     pid_path:
       description: |
         List of pids files to check
+
+    skip_backup_lock:
+      description: "Skip locking for backup operation"
+      defaul: false
+
+    skip_restore_lock:
+
+      description: "Skip locking for restore operation"
+      default: false

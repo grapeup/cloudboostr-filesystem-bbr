@@ -2,6 +2,10 @@
 
 set +e
 
+<% if_p("skip_restore_lock") do |script| %>
+exit 0
+<% end %>
+  
 PATH=/var/vcap/bosh/bin:$PATH
 
 <% p('lock.monit_job', []).each do |job| %>

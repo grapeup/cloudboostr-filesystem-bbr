@@ -1,6 +1,6 @@
 #!/bin/bash
 
-<% if_p("pre_restore_scrupt") do |script| %>
+<% if_p("pre_restore_script") do |script| %>
 <% script %>    
 <% end %>
 
@@ -20,6 +20,6 @@ mkdir -p "${BACKUP_PATH}"
 
 cp -a "${BBR_ARTIFACT_DIRECTORY}/<%= p('backup_name') %>/." "${BACKUP_PATH}/"
 
-<% if_p("post_restore_scrupt") do |script| %>
+<% if_p("post_restore_script") do |script| %>
 <% script %>    
 <% end %>
