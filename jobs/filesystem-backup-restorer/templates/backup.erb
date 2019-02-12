@@ -1,7 +1,7 @@
 #!/bin/bash
 
 <% if_p("pre_backup_script") do |script| %>
-<% script %>    
+<%= script %>    
 <% end %>  
 
 BACKUP_PATH="<%= p('backup_path') %>"
@@ -11,10 +11,10 @@ BACKUP_BASE="$(basename ${BACKUP_PATH})"
 
 BACKUP_PATH="${BACKUP_DIR}/${BACKUP_BASE}"
 
-mkdir -p "<% p('backup_name') %>"
+mkdir -p "<%= p('backup_name') %>"
 
 cp -a "${BACKUP_PATH}/." "${BBR_ARTIFACT_DIRECTORY}/<%= p('backup_name') %>"
 
 <% if_p("post_backup_script") do |script| %>
-<% script %>    
+<%= script %>    
 <% end %>
