@@ -21,9 +21,8 @@ properties:
 
     skip_backup_lock:
       description: "Skip locking for backup operation"
-      defaul: false
+      default: false
 
     skip_restore_lock:
-
       description: "Skip locking for restore operation"
       default: false
