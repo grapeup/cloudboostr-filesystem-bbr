@@ -2,6 +2,10 @@
 
 set +e
 
+<% if_p("lock.skip_restore_lock") do |script| %>
+exit 0
+<% end %>
+
 PATH=/var/vcap/bosh/bin:$PATH
 
 monit start all

@@ -2,7 +2,7 @@
 
 set +e
 
-<% if_p("skip_backup_lock") do |script| %>
+<% if_p("lock.skip_backup_lock") do |script| %>
 exit 0
 <% end %>
 
