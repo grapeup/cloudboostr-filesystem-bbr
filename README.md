@@ -8,7 +8,7 @@ Add to `releases` in deployment manifest
 ```YAML
 releases:
 - name: cloudboostr-filesystem-bbr
-  version: 1.3.2
+  version: 1.3.4
   url: git+https://github.com/grapeup/cloudboostr-filesystem-bbr
 ```
 
