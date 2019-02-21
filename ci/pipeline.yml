@@ -2,7 +2,7 @@ resources:
 - name: git
   type: git
   source:
-    uri: git@github.com:grapeup/cloudboostr-filesystem-bbr.git
+    uri: git@github.com:grapeup/filesystem-bbr-boshrelease.git
     branch: master
     private_key: ((github_private_key))
 

@@ -1,4 +1,4 @@
-name: cloudboostr-filesystem-bbr
+name: filesystem-bbr-boshrelease
 blobstore:
   provider: s3
   options:

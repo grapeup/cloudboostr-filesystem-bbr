@@ -74,7 +74,7 @@ YAML
 header "Creating final release..."
 bosh -n create-release --final --version "${VERSION}"
 
-sed "s/##VERSION##/${VERSION}/" ci/README_template.md > README.md
+sed "s/##VERSION##/${VERSION}/g" ci/README_template.md > README.md
 cd ..
 
 ######
