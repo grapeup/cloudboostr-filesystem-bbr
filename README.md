@@ -1,4 +1,4 @@
-# Cloudboostr Filesystem BBR
+# Filesystem BBR
 
 A BOSH release for BBR script that allows to backup arbitrary folder.
 
@@ -7,15 +7,15 @@ A BOSH release for BBR script that allows to backup arbitrary folder.
 Add to `releases` in deployment manifest
 ```YAML
 releases:
-- name: cloudboostr-filesystem-bbr
-  version: 1.3.6
-  url: git+https://github.com/grapeup/cloudboostr-filesystem-bbr
+- name: filesystem-bbr-boshrelease
+  version: 1.3.7
+  url: git+https://github.com/grapeup/filesystem-bbr-boshrelease
 ```
 
 Add jobs
 ```YAML
   - name: filesystem-backup-restorer
-    release: cloudboostr-filesystem-bbr
+    release: filesystem-bbr-boshrelease
     properties:
       backup_path: /var/vcap/store/prometheus2/snapshot/*
       restore_path: /var/vcap/store/prometheus2
@@ -26,7 +26,7 @@ Add jobs
       post_restore_script: ""
 
   - name: job-lock
-    release: cloudboostr-filesystem-bbr
+    release: filesystem-bbr-boshrelease
     properties:
       lock:
         monit_job:
@@ -42,7 +42,7 @@ Add jobs
   path: /instance_groups/name=prometheus2/jobs/name=filesystem-backup-restorer?
   value:
     name: filesystem-backup-restorer
-    release: cloudboostr-filesystem-bbr
+    release: filesystem-bbr-boshrelease
     properties:
       backup_path: "/var/vcap/store/prometheus2/snapshots/*"
       restore_path: /var/vcap/store/prometheus2
@@ -56,7 +56,7 @@ Add jobs
   path: /instance_groups/name=prometheus2/jobs/name=job-lock?
   value:
     name: job-lock
-    release: cloudboostr-filesystem-bbr
+    release: filesystem-bbr-boshrelease
     properties:
       lock:
         monit_job:
@@ -66,10 +66,10 @@ Add jobs
         skip_backup_lock: true
 
 - type: replace
-  path: /releases/name=cloudboostr-filesystem-bbr?
+  path: /releases/name=filesystem-bbr-boshrelease?
   value:
-    name: cloudboostr-filesystem-bbr
-    version: 1.3.4
-    url: git+https://github.com/grapeup/cloudboostr-filesystem-bbr
+    name: filesystem-bbr-boshrelease
+    version: 1.3.7
+    url: git+https://github.com/grapeup/filesystem-bbr-boshrelease
 ```
 
