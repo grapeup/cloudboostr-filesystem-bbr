@@ -77,6 +77,9 @@ bosh -n create-release --final --version "${VERSION}"
 sed "s/##VERSION##/${VERSION}/g" ci/README_template.md > README.md
 cd ..
 
+echo "v${VERSION}" > gh/tag
+echo "Filesystem BBR v${VERSION}" > gh/name
+
 ######
 ######
 ######

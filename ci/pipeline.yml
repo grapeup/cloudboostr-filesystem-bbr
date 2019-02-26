@@ -17,6 +17,14 @@ resources:
     secret_access_key: ((aws_secret_access_key))
     initial_version: "1.3.1"
 
+
+- name: github
+  type: github-release
+  source:
+    user:         grapeup
+    repository:   filesystem-bbr-boshrelease
+    access_token: (( github_token ))
+
 jobs:
 - name: minor
   public: true
@@ -56,6 +64,7 @@ jobs:
       outputs:
         - name: pushme
         - name: notifications
+        - name: gh
       run:
         path: ./git/ci/scripts/shipit.sh
         args: []
@@ -75,6 +84,12 @@ jobs:
     params:
       rebase: true
       repository: pushme/git
+
+  - name: github
+    put: github
+    params:
+      name:   gh/name
+      tag:    gh/tag
   
   - name: version-bump
     put: version
