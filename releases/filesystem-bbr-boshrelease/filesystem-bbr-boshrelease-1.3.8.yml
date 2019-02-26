@@ -1,0 +1,17 @@
+name: filesystem-bbr-boshrelease
+version: 1.3.8
+commit_hash: b34ec84
+uncommitted_changes: false
+jobs:
+- name: filesystem-backup-restorer
+  version: 8998fc50cf0a1b22119c8e1537fff0cd3cf4b7c5
+  fingerprint: 8998fc50cf0a1b22119c8e1537fff0cd3cf4b7c5
+  sha1: 0b48f803830a70ccb0f1528bcfc89de9d4342121
+- name: job-lock
+  version: 8f2d819cecee02dd2d55144814380f5743167804
+  fingerprint: 8f2d819cecee02dd2d55144814380f5743167804
+  sha1: c714ff447df0242b21bc851a70e87d418332c454
+license:
+  version: 0fbc9511a7e7f3a4d2f1af47f5ed327237b5f06c
+  fingerprint: 0fbc9511a7e7f3a4d2f1af47f5ed327237b5f06c
+  sha1: 62a2d3e5d4ac4228f12beb4909eab9ad32071f90

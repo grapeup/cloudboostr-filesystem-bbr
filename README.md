@@ -8,7 +8,7 @@ Add to `releases` in deployment manifest
 ```YAML
 releases:
 - name: filesystem-bbr-boshrelease
-  version: 1.3.7
+  version: 1.3.8
   url: git+https://github.com/grapeup/filesystem-bbr-boshrelease
 ```
 
@@ -69,7 +69,7 @@ Add jobs
   path: /releases/name=filesystem-bbr-boshrelease?
   value:
     name: filesystem-bbr-boshrelease
-    version: 1.3.7
+    version: 1.3.8
     url: git+https://github.com/grapeup/filesystem-bbr-boshrelease
 ```
 

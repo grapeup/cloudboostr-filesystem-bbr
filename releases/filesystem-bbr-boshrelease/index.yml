@@ -1,4 +1,6 @@
 builds:
   afa68d4e-4246-4404-6edc-ece550e628b0:
     version: 1.3.7
+  ecfed362-233e-4983-6fa9-6dfa436eb889:
+    version: 1.3.8
 format-version: "2"
