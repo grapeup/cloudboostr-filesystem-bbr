@@ -23,7 +23,7 @@ resources:
   source:
     user:         grapeup
     repository:   filesystem-bbr-boshrelease
-    access_token: (( github_token ))
+    access_token: ((github_token))
 
 jobs:
 - name: minor
